@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Suicide King</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script src="//fast.fonts.net/jsapi/1f312e64-e79d-4a18-9ce9-76b8920a22c8.js"></script>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="favicons/manifest.json">
+	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+	<meta name="theme-color" content="#000000">
+</head>
+
+<body>
+
+	<div class="agegate">
+		<div>
+			<img src="assets/images/logoStack.svg" alt="Four Kings Whiskey"><br>
+			 <input type="checkbox" name="iswear" id="iswear" value="yes"> <label for="iswear">I swear that I am of legal drinking age in my country</label><br><a href="/" class="enter">Enter</a>
+		</div>      
+	</div>
+
+	<div id="container">
+
+	<header>
+
+	    <div id="navButton">
+	        <a href="#" id="navToggle"><span></span></a>
+	    </div>
+	    <nav id="nav" class="hide">
+	    	<ul>
+	    		<li><a href="index.html" class="active">Home</a></li>
+	    		<li><a href="about.html">About</a></li>
+	    		<li><a href="expressions.html">Expressions</a></li>
+	    		<li><a href="libations.html">Libations</a></li>
+	    		<li><a href="philIvey.html">Phil Ivey</a></li>
+	    	</ul>
+	    </nav>
+    </header>
+
+    <div id="content">
+
+ 			<div id="logoStack"><img src="assets/images/logoStack.svg" alt="Four Kings Logo"></div>
+
+			<div id="logoRibbon"><a href="index.html"><img src="assets/images/logoRibbon.svg" alt="Four Kings Logo"></a></div>
+
+		    <div id="hero"><img src="assets/images/hero.png" alt="Suicide King Charred Espresso bottle"></div>
+
+			<div class="copyContainer">
+			    <div class="copy">
+			    <h1>Join the kings<br>go all in</h1>
+			    <p>Both classic and contemporary, and more than a little decadent, <span class="gold engravers">FOUR KINGS WHISKEY’s</span> core identity, as the name reveals, celebrates the four kings represented in a formidable deck of cards—on an adventure full of possibility and self-discovery.</p> 
+				<p class="gold">Playful. Smooth. Self-Assured.</p>
+			    </div>
+		    </div><!--copyContainer-->
+			
+			<div class="push"></div><!-- http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ -->
+
+		<div id="gradient"></div><!--gradient-->
+    </div><!--content-->
+</div><!--container-->
+
+<footer>
+	<p class="legal">legal line will go here</p>
+</footer>
+
+    <script src="assets/js/jquery-1.12.3.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/js.cookie.js"></script>
+	<script type="text/javascript">
+		legal = Cookies.get('lda'); // => 'value'
+		if (legal != "yes")	{
+			$(".agegate").css("display","block");
+		}
+		$(".agegate .enter").click(function(e) {
+	    	if(!$('.agegate input[type=checkbox]:checked').length) {
+	        	e.preventDefault();
+	        	// optionally send user to responsible drinking site
+	    	} else {
+	    	e.preventDefault();
+	    	Cookies.set('lda', 'yes', { expires: 3 });
+	    	$(".agegate").css("display","none");
+	    }
+
+		});
+	</script>
+	
+</body>
+</html>
